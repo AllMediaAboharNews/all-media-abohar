@@ -3,184 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>आल मीडिया अबोहर - सभी न्यूज़ चैनल</title>
+    <title>   -   </title>
+    
     <style>
         :root {
             --primary-color: #e74c3c;
             --wa-color: #25d366;
             --fb-color: #1877f2;
             --yt-color: #ff0000;
-            --insta-color: #e4405f;
-            --contact-color: #ff9800;
-            --admin-bg: #fff;
+            --dark-bg: #222;
         }
 
         body {
             font-family: 'Hind', sans-serif;
-            background-color: #f0f2f5;
+            background-color: #f4f7f6;
             margin: 0;
-            padding: 15px;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        /* --- Breaking News Ticker --- */
+        .ticker-wrapper {
+            width: 100%;
+            background: var(--dark-bg);
+            color: #fff;
+            padding: 8px 0;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        .ticker-title {
+            background: var(--primary-color);
+            padding: 0 15px;
+            font-weight: bold;
+            white-space: nowrap;
+            z-index: 2;
+            font-size: 14px;
+        }
+        .ticker-text {
+            white-space: nowrap;
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* --- Digital Clock Section --- */
+        .clock-section {
+            background: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-bottom: 1px solid #ddd;
+        }
+        #digital-clock {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            letter-spacing: 1px;
+        }
+        #current-date {
+            font-size: 13px;
+            color: #666;
+            margin-top: 2px;
         }
 
         header {
             text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 4px solid var(--primary-color);
-            padding-bottom: 10px;
+            padding: 20px;
+            background: white;
             width: 100%;
-            max-width: 600px;
         }
-
-        h1 { color: #222; margin: 0; font-size: 26px; }
-        .tagline { color: #666; font-size: 14px; margin-top: 5px; }
 
         .container {
-            width: 100%;
+            width: 95%;
             max-width: 600px;
+            margin-top: 15px;
         }
 
-        /* एडमिन सेक्शन */
-        .admin-section {
-            background-color: var(--admin-bg);
+        /*     */
+        .weather-box {
+            background: linear-gradient(135deg, #00b4db, #0083b0);
+            color: white;
             padding: 15px;
             border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 2px solid #e1e8ed;
+            margin-bottom: 15px;
             text-align: center;
         }
-
-        .admin-title {
-            color: #333;
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .admin-buttons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .admin-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-            border-radius: 30px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .admin-fb { background-color: var(--fb-color); }
-        .admin-yt { background-color: var(--yt-color); }
-
-        /* न्यूज़ लिंक स्टाइल्स */
-        .category-title {
-            background: #34495e;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .link-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .link-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .google-search-container {
             background: white;
-            padding: 14px;
-            border-radius: 10px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-            border-left: 6px solid #ccc;
-        }
-
-        .wa { border-left-color: var(--wa-color); }
-
-        /* कांटेक्ट बॉक्स */
-        .contact-box {
-            background: #fff8e1;
-            border: 2px dashed var(--contact-color);
-            padding: 20px;
-            margin-top: 30px;
-            text-align: center;
+            padding: 15px;
             border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
+        .search-form { display: flex; gap: 5px; }
+        .search-input { flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 25px; outline: none; }
+        .search-btn { background: #4285f4; color: white; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer; }
 
-        .contact-btn {
-            background-color: var(--wa-color);
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 30px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        footer {
-            margin-top: 40px;
+        /*   */
+        .admin-section {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px;
             text-align: center;
-            color: #888;
-            font-size: 13px;
+            border: 1px solid #eee;
         }
+        .admin-buttons { display: flex; gap: 10px; justify-content: center; margin-top: 10px; }
+        .btn { padding: 10px 20px; border-radius: 25px; text-decoration: none; color: white; font-weight: bold; font-size: 14px; }
+        .fb { background: var(--fb-color); }
+        .yt { background: var(--yt-color); }
+
+        .category-title { background: #34495e; color: white; padding: 10px; border-radius: 8px; font-weight: bold; margin-top: 20px; }
+        .link-card { background: white; padding: 15px; border-radius: 10px; margin-top: 10px; display: flex; justify-content: space-between; border-left: 5px solid var(--wa-color); text-decoration: none; color: #333; font-weight: bold; }
+
+        footer { margin: 40px 0; text-align: center; color: #888; font-size: 12px; }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="startTime()">
 
-    <header>
-        <h1>आल मीडिया अबोहर</h1>
-        <p class="tagline">अबोहर की हर खबर, हर चैनल अब एक ही क्लिक पर</p>
-    </header>
-
-    <div class="container">
-        
-        <div class="admin-section">
-            <h3 class="admin-title">हमें फॉलो और सब्सक्राइब करें</h3>
-            <div class="admin-buttons">
-                <a href="https://www.facebook.com/share/1BLfEYqWbP/" class="admin-btn admin-fb" target="_blank">Facebook</a>
-                <a href="https://www.youtube.com/@AIMAMEDIAABOHAR625" class="admin-btn admin-yt" target="_blank">YouTube</a>
-            </div>
+    <div class="ticker-wrapper">
+        <div class="ticker-title">LIVE UPDATES</div>
+        <div class="ticker-text">
+            &nbsp;&nbsp;&nbsp;&nbsp;       ...     ...          ... : 6239850817 &nbsp;&nbsp;&nbsp;&nbsp;
         </div>
-
-        <div class="category-title">WhatsApp न्यूज़ ग्रुप <span>🟢</span></div>
-        <div class="link-list">
-            <a href="#" class="link-item wa" target="_blank">न्यूज़ ग्रुप 1 (लिंक यहाँ डालें)</a>
-            </div>
-
-        <div class="contact-box">
-            <h3>अपना चैनल यहाँ जुड़वाएं</h3>
-            <p>लिस्ट में शामिल होने के लिए एडमिन को मैसेज करें।</p>
-            <a href="https://wa.me/916239850817?text=नमस्ते, मुझे आल मीडिया अबोहर वेबसाइट पर अपना चैनल जुड़वाना है।" class="contact-btn" target="_blank">
-                WhatsApp: 6239850817
-            </a>
-        </div>
-
     </div>
 
-    <footer>
-        &copy; 2024 आल मीडिया अबोहर | अबोहर की आवाज़
-    </footer>
+    <div class="clock-section">
+        <div id="digital-clock">00:00:00 AM</div>
+        <div id="current-date">Loading date...</div>
+    </div>
 
-</body>
-</html>
+    <header>
+        <h1 style="margin:0; color:#222; font-size: 28px;">  
