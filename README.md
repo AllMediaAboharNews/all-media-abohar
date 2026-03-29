@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>All Media Abohar | अबोहर की ताज़ा खबरें</title>
+<meta name="description" content="All Media Abohar – अबोहर के सभी न्यूज़ चैनल, WhatsApp ग्रुप, Facebook, YouTube और Google Search एक ही प्लेटफॉर्म पर।">
+<meta name="keywords" content="All Media Abohar, Abohar News, WhatsApp News Abohar, Abohar Media">
+<meta name="author" content="All Media Abohar News">
+
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--primary:#d32f2f;
+--wa:#25d366;
+--fb:#1877f2;
+--yt:#ff0000;
+}
+
+body{
+margin:0;
+font-family:'Hind',sans-serif;
+background:#f2f4f7;
+display:flex;
+justify-content:center;
+}
+
+.main{
+width:100%;
+max-width:600px;
+padding:15px;
+}
+
+header{
+background:#fff;
+border-radius:15px;
+padding:15px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+border-bottom:5px solid var(--primary);
+}
+
+header h1{
+margin:0;
+font-size:26px;
+color:#222;
+}
+
+header p{
+margin:5px 0 0;
+color:#666;
+font-size:14px;
+}
+
+.section{
+background:#fff;
+margin-top:20px;
+padding:15px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.section-title{
+font-size:18px;
+font-weight:600;
+margin-bottom:10px;
+color:#333;
+}
+
+.search-box{
+display:flex;
+gap:6px;
+}
+
+.search-box input{
+flex:1;
+padding:12px;
+border-radius:30px;
+border:1px solid #ddd;
+font-size:14px;
+outline:none;
+}
+
+.search-box button{
+background:#4285f4;
+border:none;
+color:#fff;
+padding:12px 20px;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+}
+
+.btns{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-top:10px;
+}
+
+.btn{
+padding:14px;
+border-radius:30px;
+color:#fff;
+text-align:center;
+font-weight:600;
+text-decoration:none;
+}
+
+.fb{background:var(--fb);}
+.yt{background:var(--yt);}
+
+.link-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#fff;
+margin-top:10px;
+padding:14px;
+border-radius:12px;
+text-decoration:none;
+color:#222;
+font-weight:600;
+border-left:6px solid var(--wa);
+box-shadow:0 2px 6px rgba(0,0,0,.1);
+}
+
+.contact{
+text-align:center;
+background:#fff8e1;
+border:2px dashed #ff9800;
+padding:20px;
+border-radius:15px;
+margin-top:25px;
+}
+
+.contact a{
+display:inline-block;
+margin-top:10px;
+padding:14px 25px;
+background:var(--wa);
+color:#fff;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+}
+
+footer{
+margin:30px 0 10px;
+text-align:center;
+color:#777;
+font-size:13px;
+}
+</style>
+</head>
+
+<body>
+<div class="main">
+
+<header>
+<h1>All Media Abohar</h1>
+<p>अबोहर की खबरें • सोशल मीडिया • सर्च</p>
+</header>
+
+<div class="section">
+<div class="section-title">🔎 Google Search</div>
+<form action="https://www.google.com/search" method="get" target="_blank">
+<div class="search-box">
+<input type="text" name="q" placeholder="गूगल पर कुछ भी खोजें..." required>
+<button type="submit">Search</button>
+</div>
+</form>
+</div>
+
+<div class="section">
+<div class="section-title">📢 ADMIN – Follow Us</div>
+<div class="btns">
+<a href="https://www.facebook.com/share/1BLfEYqWbP/" target="_blank" rel="noopener noreferrer" class="btn fb">Facebook</a>
+<a href="https://www.youtube.com/@AIMAMEDIAABOHAR625" target="_blank" rel="noopener noreferrer" class="btn yt">YouTube</a>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">🟢 WhatsApp News Group</div>
+<a href="https://chat.whatsapp.com/BjGndqWiQEn1G4pwvFrwc5?mode=gi_t"
+target="_blank" rel="noopener noreferrer" class="link-item">
+ताज़ा खबर अबोहर – Join Group
+</a>
+</div>
+
+<div class="contact">
+<h3>अपना न्यूज़ चैनल जोड़ें</h3>
+<a href="https://wa.me/916239850817?text=नमस्ते, मुझे All Media Abohar ऐप/वेबसाइट पर अपना चैनल जुड़वाना है।"
+target="_blank" rel="noopener noreferrer">
+WhatsApp: 6239850817
+</a>
+</div>
+
+<footer>
+© 2026 All Media Abohar | Made for Abohar City
+</footer>
+
+</div>
+</body>
+</html>
