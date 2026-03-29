@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आल मीडिया अबोहर - सभी न्यूज़ चैनल</title>
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --wa-color: #25d366;
+            --fb-color: #1877f2;
+            --yt-color: #ff0000;
+            --insta-color: #e4405f;
+            --contact-color: #ff9800;
+            --admin-bg: #fff;
+        }
+
+        body {
+            font-family: 'Hind', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 4px solid var(--primary-color);
+            padding-bottom: 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h1 { color: #222; margin: 0; font-size: 26px; }
+        .tagline { color: #666; font-size: 14px; margin-top: 5px; }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* एडमिन सेक्शन */
+        .admin-section {
+            background-color: var(--admin-bg);
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid #e1e8ed;
+            text-align: center;
+        }
+
+        .admin-title {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .admin-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .admin-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .admin-fb { background-color: var(--fb-color); }
+        .admin-yt { background-color: var(--yt-color); }
+
+        /* न्यूज़ लिंक स्टाइल्स */
+        .category-title {
+            background: #34495e;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .link-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 14px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            border-left: 6px solid #ccc;
+        }
+
+        .wa { border-left-color: var(--wa-color); }
+
+        /* कांटेक्ट बॉक्स */
+        .contact-box {
+            background: #fff8e1;
+            border: 2px dashed var(--contact-color);
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .contact-btn {
+            background-color: var(--wa-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #888;
+            font-size: 13px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>आल मीडिया अबोहर</h1>
+        <p class="tagline">अबोहर की हर खबर, हर चैनल अब एक ही क्लिक पर</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="admin-section">
+            <h3 class="admin-title">हमें फॉलो और सब्सक्राइब करें</h3>
+            <div class="admin-buttons">
+                <a href="https://www.facebook.com/share/1BLfEYqWbP/" class="admin-btn admin-fb" target="_blank">Facebook</a>
+                <a href="https://www.youtube.com/@AIMAMEDIAABOHAR625" class="admin-btn admin-yt" target="_blank">YouTube</a>
+            </div>
+        </div>
+
+        <div class="category-title">WhatsApp न्यूज़ ग्रुप <span>🟢</span></div>
+        <div class="link-list">
+            <a href="#" class="link-item wa" target="_blank">न्यूज़ ग्रुप 1 (लिंक यहाँ डालें)</a>
+            </div>
+
+        <div class="contact-box">
+            <h3>अपना चैनल यहाँ जुड़वाएं</h3>
+            <p>लिस्ट में शामिल होने के लिए एडमिन को मैसेज करें।</p>
+            <a href="https://wa.me/916239850817?text=नमस्ते, मुझे आल मीडिया अबोहर वेबसाइट पर अपना चैनल जुड़वाना है।" class="contact-btn" target="_blank">
+                WhatsApp: 6239850817
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2024 आल मीडिया अबोहर | अबोहर की आवाज़
+    </footer>
+
+</body>
+</html>
